@@ -8,6 +8,10 @@ public class Entity : MonoBehaviour
 {
 
 	public float Speed;
+	public float RotateSpeed;
+	
+	protected Transform Target;
+	
 	/**
      * Init entity Instance
      */
@@ -42,5 +46,10 @@ public class Entity : MonoBehaviour
     protected virtual void Attack()
     {
 	    
+    }
+    
+    public void SetTarget(Transform target)
+    {
+	    Target = target;
     }
 }

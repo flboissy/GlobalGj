@@ -3,33 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyPlayer : Entity
+public class EnemyPlayer : Enemy
 {
-	private Transform Target;
-
-	private NavMeshAgent IaAgent;
-    // Start is called before the first frame update
+	// Start is called before the first frame update
     void Start()
     {
-	    IaAgent = gameObject.GetComponent<NavMeshAgent>();
+	    Init();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         SetTarget(player.transform);
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if(!Target) return;
         Move(Target.position);
-    }
-
-    public void SetTarget(Transform target)
-    {
-	    Target = target;
-    }
-
-    protected override void Move(Vector3 targetPos)
-    {
-	    IaAgent.SetDestination(targetPos);
     }
 }
