@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class EnergyBar : MonoBehaviour
 {
     public Image energy;
-    public ScriptablePlayer player;
+   
 
     public void LoseEnergy(float amount)
     {
-        energy.fillAmount -= amount / player.totalEnergy;
+        energy.fillAmount -= amount / GameManager.Instance.player.totalEnergy;
     }
 
     // Start is called before the first frame update
