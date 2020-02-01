@@ -45,4 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerPrefab: {fileID: 6260996843567450832, guid: 8e8c7f896c3c5ca40b7fca6d255627b2,
     type: 3}
+  EnergyBar: {fileID: 0}
+  player: {fileID: 11400000, guid: 526ed3ede8b4d5d4f9ea8eeb854d6e8e, type: 2}
   SpawnPoint: {fileID: 0}

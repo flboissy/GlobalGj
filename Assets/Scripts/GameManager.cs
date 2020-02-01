@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Classes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class GameManager : MonoBehaviour
 
 	private GameObject PlayerObj;
 	public GameObject PlayerPrefab;
+    public EnergyBar EnergyBar;
+    public ScriptablePlayer player;
 	public Transform SpawnPoint;
 	
 	// Start is called before the first frame update
@@ -48,6 +51,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            EnergyBar.LoseEnergy(10f);
+        }
     }
 }
