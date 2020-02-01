@@ -22,7 +22,7 @@ public class Player : Entity
     // Update is called once per frames
     void Update()
     {
-	    moveDirection = new Vector3(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"),0);
+	    moveDirection = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
 	    rotDirection = new Vector3(Input.GetAxis("Rot_H"),Input.GetAxis("Rot_V"),0);
 
 	    if (Input.GetAxis("Fire")>0 && canAttack)

@@ -15,10 +15,10 @@ public class Projectile : Entity
     // Update is called once per frame
     void Update()
     {
-	    Move(Vector3.right);
+	    Move(Vector3.forward);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter(Collision other)
     {
 	    Destroy(gameObject);
     }
