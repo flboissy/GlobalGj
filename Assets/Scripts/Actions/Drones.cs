@@ -22,8 +22,8 @@ public class Drones : MonoBehaviour
 		    Transform drone = DronesObj[0];
 		    drone.GetComponent<DroneEntity>().SetTarget(target);
 		    DronesObj.RemoveAt(0);
+		    if(DronesObj.Count<1) Destroy(gameObject);
 	    }
-	    
     }
 
     private void IsUnderAttack(Collider other)
@@ -37,7 +37,6 @@ public class Drones : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 	    IsUnderAttack(other);
-	    Debug.Log(other);
     }
 
 }

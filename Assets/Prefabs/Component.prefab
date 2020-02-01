@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5862213786551738684}
   - component: {fileID: 3616639685834298012}
-  m_Layer: 11
+  - component: {fileID: 8921503619375720080}
+  m_Layer: 12
   m_Name: Component
   m_TagString: Component
   m_Icon: {fileID: 0}
@@ -44,7 +45,27 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.55, y: 1, z: 0.59}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &8921503619375720080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005871691543053710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d87227d3ad9524ba32d008602b921a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Actions:
+  - Type: 3
+    Description: 
+    Cooldown: 0
+    EnergyCost: 0
+    Available: 0
+    sprite: {fileID: 0}
+    inCooldown: 0
 --- !u!1 &6143882228989936187
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +76,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689395448546242488}
   - component: {fileID: 7308646518757349317}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

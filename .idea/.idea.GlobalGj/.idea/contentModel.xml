@@ -4,9 +4,17 @@
     <e p="C:\Users\Amryon\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Amryon\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_GlobalGj.1691207583.00" t="ExcludeRecursive" />
     <e p="D:\Mes documents\Editeur de jeu\Unity\GlobalGj" t="IncludeRecursive">
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Plugins" t="Include">
+          <e p="Mega Toon FX Free Pack" t="Include">
+            <e p="Script" t="Include">
+              <e p="AutoDestory.cs" t="Include" />
+              <e p="CameraOrbit.cs" t="Include" />
+              <e p="SceneManager.cs" t="Include" />
+            </e>
+          </e>
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">
               <e p="NavMeshAssetManager.cs" t="Include" />
@@ -23,6 +31,13 @@
               <e p="NavMeshSurface.cs" t="Include" />
             </e>
           </e>
+          <e p="True Explosions" t="Include">
+            <e p="system" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="SphereVolumetricExplosion.shader" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="Actions" t="Include">
@@ -31,9 +46,11 @@
             <e p="ActionMenu.cs" t="Include" />
             <e p="DroneEntity.cs" t="Include" />
             <e p="Drones.cs" t="Include" />
+            <e p="Electrochoc.cs" t="Include" />
             <e p="FireWall.cs" t="Include" />
           </e>
           <e p="ArrayList.cs" t="Include" />
+          <e p="AspectRatio.cs" t="Include" />
           <e p="Classes" t="Include">
             <e p="Action.cs" t="Include" />
             <e p="ScriptablePlayer.cs" t="Include" />

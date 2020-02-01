@@ -17,25 +17,33 @@ public class Player : Entity
     void Start()
     {
 	    CharCtrl = gameObject.GetComponent<CharacterController>();
+	    EntityAnimator = gameObject.GetComponent<Animator>();
+	    Init();
     }
 
     // Update is called once per frames
     void Update()
     {
-	    moveDirection = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
-	    rotDirection = new Vector3(Input.GetAxis("Rot_H"),Input.GetAxis("Rot_V"),0);
-
+	    if (CharCtrl.isGrounded)
+	    {
+		    moveDirection = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
+		    rotDirection = new Vector3(Input.GetAxis("Rot_H"),Input.GetAxis("Rot_V"),0);
+	    }
+	    moveDirection.y -= 9.0f * Time.deltaTime;
+	    
 	    if (Input.GetAxis("Fire")>0 && canAttack)
 	    {
 		    canAttack = false;
 		    Attack();
 		    StartCoroutine("WaitBetweenAttack");
 	    }
+	    
+	    Move(moveDirection);
+	    
     }
 
     private void FixedUpdate()
     {
-	    Move(moveDirection);
 	    if (rotDirection.x != 0 || rotDirection.y != 0)
 	    {
 		    Rotate(rotDirection);
@@ -50,7 +58,7 @@ public class Player : Entity
 
     protected override void Attack()
     {
-	    GameObject bullet = Instantiate(BulletPrefab, transform.position, transform.localRotation);
+	    GameObject bullet = Instantiate(BulletPrefab, transform.position + new Vector3(0,0.5f,0), transform.localRotation);
     }
 
     IEnumerator WaitBetweenAttack()
