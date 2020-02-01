@@ -34,7 +34,7 @@ public class MenuClickManager : MonoBehaviour
         }
     }
 
-    public void GameObjectClicked(Transform clickableTransform, List<Action> actions)
+    public void GameObjectClicked(Clickable clickableTransform, List<Action> actions)
     {
         if(this.instantiateMenu == null)
         {
@@ -55,7 +55,7 @@ public class MenuClickManager : MonoBehaviour
         //this.instantiateMenu.transform.
     }
 
-    private void closeMenu()
+    public void closeMenu()
     {
         if (this.instantiateMenu != null)
         {

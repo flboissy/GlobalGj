@@ -9,37 +9,27 @@ public class ActionButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 {
 
     public Action action;
-    public Transform target;
+    public Clickable target;
     private float lastClick;
     private bool isInCooldown;
-    private bool canClick;
+    private bool canClick = true;
     private Shadow shadowComponent;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (canClick)
+        if (!action.inCooldown)
         {
-            ActionFabric.Instance.InstantiateAction(action.Type, target);
-            lastClick = Time.time;
+            ActionFabric.Instance.InstantiateAction(action.Type, target.transform);
+            target.StartCooldownCoroutine(action);
+            MenuClickManager.Instance.closeMenu();
         }
     }
 
     private void Update()
     {
-        if (Time.time > lastClick + action.Cooldown)
+        if(action != null && action.inCooldown)
         {
-            isInCooldown = false;
-            canClick = true;
-        }
-        else
-        {
-            isInCooldown = true;
-            canClick = false;
-        }
-
-        if (isInCooldown)
-        {
-            
+            //TODO Gerer l'affichage du CD
         }
     }
 

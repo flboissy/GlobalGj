@@ -15,9 +15,8 @@ namespace Assets.Scripts.Classes
         Drone,
         Push
     }
-
-    [CreateAssetMenu]
-    public class Action : ScriptableObject
+    [Serializable]
+    public class Action
     {
         public ActionType Type;
         public String Description;
@@ -25,7 +24,7 @@ namespace Assets.Scripts.Classes
         public int EnergyCost;
         public bool Available;
         public Sprite sprite;
-        public float duration;
+        public bool inCooldown;
 
     }
 }

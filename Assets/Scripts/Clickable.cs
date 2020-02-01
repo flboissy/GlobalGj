@@ -9,7 +9,7 @@ public class Clickable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        MenuClickManager.Instance.GameObjectClicked(transform, Actions);
+        MenuClickManager.Instance.GameObjectClicked(this, Actions);
     }
 
     // Start is called before the first frame update
@@ -22,5 +22,24 @@ public class Clickable : MonoBehaviour
     void Update()
     {
 
+    }
+
+
+    public void StartCooldownCoroutine(Action action)
+    {
+        foreach (var act in Actions)
+        {
+            if(act.Type == action.Type)
+            {
+                StartCoroutine(CoolDownCoroutine(act));
+            }
+        }
+    }
+
+    IEnumerator CoolDownCoroutine(Action action)
+    {
+        action.inCooldown = true;
+        yield return new WaitForSeconds(action.Cooldown);
+        action.inCooldown = false;
     }
 }

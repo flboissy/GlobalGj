@@ -10,7 +10,7 @@ public class ActionMenu : MonoBehaviour
     public List<Transform> Anchors;
     public ActionButton prefab;
 
-    public void InstantiateActionsAndTarget(List<Action> actionList, Transform target)
+    public void InstantiateActionsAndTarget(List<Action> actionList, Clickable target)
     {
         for (int i = 0; i < actionList.Count; i++)
         {

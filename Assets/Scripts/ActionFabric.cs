@@ -6,6 +6,7 @@ using UnityEngine;
 public class ActionFabric : MonoBehaviour
 {
 
+    public FireWall fireWall;
 
     private static ActionFabric _instance = null;
     public static ActionFabric Instance
@@ -34,7 +35,8 @@ public class ActionFabric : MonoBehaviour
                 Debug.Log("I will instantiate: " + type);
                 break;
             case ActionType.Firewall:
-                Debug.Log("I will instantiate: " + type);
+                Debug.Log("coucou");
+                Instantiate(fireWall, target);
                 break;
             case ActionType.Quarantine:
                 Debug.Log("I will instantiate: " + type);

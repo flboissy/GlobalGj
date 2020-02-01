@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f6a669e6f2960c4f950ae6035fb25b9, type: 3}
-  m_Name: New Action
+  m_Script: {fileID: 11500000, guid: 3f2a5ac3c5ae37048977d25d1a9d8f6d, type: 3}
+  m_Name: FireWall
   m_EditorClassIdentifier: 
   Type: 0
-  Description: 
-  Cooldown: 0
   EnergyCost: 0
-  Available: 0
   sprite: {fileID: 0}
-  duration: 0
+  duration: 5
