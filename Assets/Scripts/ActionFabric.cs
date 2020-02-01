@@ -37,6 +37,7 @@ public class ActionFabric : MonoBehaviour
             case ActionType.Firewall:
                 Debug.Log("coucou");
                 Instantiate(fireWall, target);
+                GameManager.Instance.LoseEnergy(fireWall.associatedAction.EnergyCost);
                 break;
             case ActionType.Quarantine:
                 Debug.Log("I will instantiate: " + type);

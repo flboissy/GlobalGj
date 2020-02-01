@@ -47,13 +47,12 @@ public class GameManager : MonoBehaviour
 	    return PlayerObj;
     }
     
-    
+    public void LoseEnergy(float amount)
+    {
+        EnergyBar.LoseEnergy(amount);
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            EnergyBar.LoseEnergy(10f);
-        }
     }
 }
