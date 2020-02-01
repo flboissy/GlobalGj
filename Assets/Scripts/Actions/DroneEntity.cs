@@ -13,6 +13,7 @@ public class DroneEntity : Entity
     // Update is called once per frame
     void Update()
     {
-        
+        if(!Target) return;
+        MoveTo(Target.position);
     }
 }

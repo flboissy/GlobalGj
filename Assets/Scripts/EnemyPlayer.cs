@@ -17,6 +17,6 @@ public class EnemyPlayer : Enemy
     void Update()
     {
         if(!Target) return;
-        Move(Target.position);
+        MoveTo(Target.position);
     }
 }

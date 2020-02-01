@@ -12,8 +12,8 @@ public class Enemy : Entity
 		IaAgent = gameObject.GetComponent<NavMeshAgent>();
 	}
 
-	protected override void Move(Vector3 targetPos)
+	protected override void MoveTo(Vector3 position)
 	{
-		IaAgent.SetDestination(targetPos);
+		IaAgent.SetDestination(position);
 	}
 }
