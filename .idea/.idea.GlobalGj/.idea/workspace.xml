@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5a38380e-c3b9-48d2-bf49-3f30180bd2eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GlobalGj/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GlobalGj/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GlobalGj/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GlobalGj/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GlobalGj/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GlobalGj/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Component.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Component.prefab" afterDir="false" />
@@ -11,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyPlayer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mur.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Mur.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/IATest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IATest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/IATest/NavMesh-Niveau.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IATest/NavMesh-Niveau.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/DroneEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/DroneEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/Drones.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/Drones.cs" afterDir="false" />
