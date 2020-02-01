@@ -24,7 +24,7 @@ public class EnemyComponent : Enemy
 		    FindTarget(curRadius);
 		    return;
 	    }
-	    Move(Target.position);
+	    MoveTo(Target.position);
     }
 
     private void FindTarget(float radius)
@@ -32,7 +32,7 @@ public class EnemyComponent : Enemy
 	    Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
 	    foreach (Collider collider in hitColliders) 
 	    {
-			if (collider.tag.Equals("Component"))
+			if (collider.CompareTag("Component"))
 			{
 				SetTarget(collider.transform);
 				curRadius = startRadius;

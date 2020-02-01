@@ -24,9 +24,10 @@ public class Entity : MonoBehaviour
     /**
      * Move entity to a specific target
      */
-    protected virtual void Move(Transform target)
+    protected virtual void MoveTo(Vector3 position)
     {
-	    
+	    float step = Speed * Time.deltaTime;
+	    transform.position = Vector3.MoveTowards(transform.position, position, step);
     }
     
     /**
