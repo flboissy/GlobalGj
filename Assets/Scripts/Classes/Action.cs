@@ -25,6 +25,7 @@ namespace Assets.Scripts.Classes
         public bool Available;
         public Sprite sprite;
         public bool inCooldown;
+        public KeyCode keyCode;
 
     }
 }

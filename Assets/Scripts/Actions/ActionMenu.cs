@@ -6,20 +6,18 @@ using UnityEngine.UI;
 
 public class ActionMenu : MonoBehaviour
 {
+    public ActionButtonManager prefab;
+    public List<Action> actions;
+    public Transform target;
 
-    public List<Transform> Anchors;
-    public ActionButton prefab;
-
-    public void InstantiateActionsAndTarget(List<Action> actionList, Clickable target)
+    public void InstantiateActions()
     {
-        for (int i = 0; i < actionList.Count; i++)
+        for (int i = 0; i < actions.Count; i++)
         {
-            if (actionList[i].Available)
+            if (actions[i].Available)
             {
-                ActionButton instance = Instantiate(prefab, Anchors[i]);
-                instance.GetComponentInChildren<Image>().sprite = actionList[i].sprite;
-                instance.target = target;
-                instance.action = actionList[i];
+                ActionButtonManager instance = Instantiate(prefab, this.transform);
+                instance.GetComponent<Image>().sprite = actions[i].sprite;
             }
         }
     }
@@ -27,7 +25,7 @@ public class ActionMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        InstantiateActions( );
     }
 
     // Update is called once per frame

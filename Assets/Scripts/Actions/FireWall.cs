@@ -18,7 +18,7 @@ public class FireWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time > startTime + associatedAction.duration)
+        if(Time.time > startTime + associatedAction.Duration)
         {
             Destroy(this.gameObject);
         }

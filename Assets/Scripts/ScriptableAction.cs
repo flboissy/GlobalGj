@@ -13,7 +13,9 @@ namespace Assets.Scripts
     {
         public ActionType Type;
         public int EnergyCost;
-        public Sprite sprite;
-        public float duration;
+        public Sprite Sprite;
+        public float Duration;
+        public float Cooldown;
+        public KeyCode keyCode;
     }
 }

@@ -22,9 +22,7 @@ public class Electrochoc : MonoBehaviour
             other.GetComponent<Entity>().Stop();
         }
     }
-
-
-
+    
     private void OnDestroy()
     {
         foreach (var go in triggers)

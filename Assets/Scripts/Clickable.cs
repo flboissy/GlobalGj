@@ -9,7 +9,7 @@ public class Clickable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        MenuClickManager.Instance.GameObjectClicked(this, Actions);
+        //MenuClickManager.Instance.GameObjectClicked(this, Actions);
     }
 
     // Start is called before the first frame update

@@ -1,0 +1,75 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Assets.Scripts.Classes;
+
+public class Component : MonoBehaviour
+{
+
+    private bool isSelected;
+    private SpriteRenderer spriteRenderer;
+    private Renderer myRenderer;
+    public Sprite selectedSprite;
+    public Sprite notSelectedSprite;
+    public bool isVisible;
+
+    public bool getIsVisible()
+    {
+        return isVisible;
+    }
+
+    public void setIsSelected(bool val)
+    {
+        isSelected = val;
+    }
+
+    public bool getIsSelected()
+    {
+        return isSelected;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        myRenderer = GetComponent<Renderer>();
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (CheckIfVisibilityChange(isVisible, spriteRenderer.isVisible))
+        {
+            isVisible = spriteRenderer.isVisible;
+            GameManager.Instance.UpdateSelectableComponenent();
+        }
+
+        if (isSelected)
+        {
+            spriteRenderer.sprite = selectedSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = notSelectedSprite;
+        }
+    }
+
+    public void StartCooldownCoroutine(Action action)
+    {
+        StartCoroutine(CoolDownCoroutine(action));
+    }
+
+    public bool CheckIfVisibilityChange(bool currentVal, bool newVal)
+    {
+        return currentVal != newVal;
+    }
+
+    IEnumerator CoolDownCoroutine(Action action)
+    {
+        action.inCooldown = true;
+        yield return new WaitForSeconds(action.Cooldown);
+        action.inCooldown = false;
+    }
+}
