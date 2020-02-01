@@ -50,6 +50,7 @@
             <e p="FireWall.cs" t="Include" />
           </e>
           <e p="ArrayList.cs" t="Include" />
+          <e p="AspectRatio.cs" t="Include" />
           <e p="Classes" t="Include">
             <e p="Action.cs" t="Include" />
             <e p="ScriptablePlayer.cs" t="Include" />
