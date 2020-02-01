@@ -30,12 +30,18 @@ public class Entity : MonoBehaviour
      */
     protected virtual void Move(Vector3 moveDirection)
     {
-	    
+	    moveDirection *= Speed;
+	    transform.Translate(moveDirection*Time.deltaTime);
     }
 
     protected void Rotate(Vector3 rotDirection)
     {
 	    float angle = Mathf.Atan2(rotDirection.x, rotDirection.y) * Mathf.Rad2Deg;
 	    transform.rotation = Quaternion.AngleAxis(angle,Vector3.forward);
+    }
+
+    protected virtual void Attack()
+    {
+	    
     }
 }
