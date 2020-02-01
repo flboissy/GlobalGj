@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyComponent : Entity
+public class EnemyComponent : Enemy
 {
-	
-	private Transform Target;
-	private NavMeshAgent IaAgent;
 
 	public float startRadius;
 	private float curRadius = 0;
+	
     // Start is called before the first frame update
     void Start()
     {
-	    IaAgent = gameObject.GetComponent<NavMeshAgent>();
+	    Init();
 	    curRadius = startRadius;
     }
 
@@ -32,19 +30,18 @@ public class EnemyComponent : Entity
     private void FindTarget(float radius)
     {
 	    Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
-	    if (hitColliders.Length > 0)
+	    foreach (Collider collider in hitColliders) 
 	    {
-		    Target = hitColliders[0].transform;
-		    curRadius = startRadius;
-	    }
-	    else
-	    {
-		    curRadius++;
-	    }
-    }
-    
-    protected override void Move(Vector3 targetPos)
-    {
-	    IaAgent.SetDestination(targetPos);
+			if (collider.tag.Equals("Component"))
+			{
+				SetTarget(collider.transform);
+				curRadius = startRadius;
+			}
+			else
+			{
+				curRadius++;
+			}
+		}
+	    
     }
 }
