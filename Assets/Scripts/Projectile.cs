@@ -14,6 +14,10 @@ public class Projectile : Entity
 
     private void OnCollisionEnter(Collision other)
     {
-	    Destroy(gameObject);
+	    if (other.gameObject.CompareTag("Enemy"))
+	    {
+		    other.gameObject.GetComponent<Entity>().TakeDammages();
+	    }
+	    Dead();
     }
 }

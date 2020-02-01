@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -17,8 +18,9 @@ public class EnemyComponent : Enemy
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+	    base.Update();
 	    if (!Target)
 	    {
 		    FindTarget(curRadius);
@@ -42,6 +44,18 @@ public class EnemyComponent : Enemy
 				curRadius++;
 			}
 		}
-	    
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+	    if (other.gameObject.CompareTag("Component"))
+	    {
+		    Debug.Log(("Take dammages"));
+	    }
+    }
+
+    protected override void Attack()
+    {
+	    base.Attack();
     }
 }

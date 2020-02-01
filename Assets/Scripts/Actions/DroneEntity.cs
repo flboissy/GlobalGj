@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,5 +16,14 @@ public class DroneEntity : Entity
     {
         if(!Target) return;
         MoveTo(Target.position);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+	    if (other.CompareTag("Enemy"))
+	    {
+		    other.GetComponent<Entity>().TakeDammages();
+	    }
+	    Dead();
     }
 }
