@@ -8,7 +8,6 @@ public class Entity : MonoBehaviour
 {
 
 	public float Speed;
-	public float RotationSpeed;
 	/**
      * Init entity Instance
      */
@@ -37,7 +36,7 @@ public class Entity : MonoBehaviour
     protected void Rotate(Vector3 rotDirection)
     {
 	    float angle = Mathf.Atan2(rotDirection.x, rotDirection.y) * Mathf.Rad2Deg;
-	    transform.rotation = Quaternion.AngleAxis(angle,Vector3.forward);
+	    transform.rotation = Quaternion.AngleAxis(angle,Vector3.up);
     }
 
     protected virtual void Attack()
