@@ -8,6 +8,7 @@ public class Entity : MonoBehaviour
 {
 
 	public float Speed;
+    protected float InitialSpeed;
 	public float RotateSpeed;
 	
 	protected Transform Target;
@@ -17,7 +18,7 @@ public class Entity : MonoBehaviour
      */
     protected virtual void Init()
     {
-        
+
     }
 
     /**
@@ -51,5 +52,15 @@ public class Entity : MonoBehaviour
     public void SetTarget(Transform target)
     {
 	    Target = target;
+    }
+
+    public void Stop()
+    {
+        this.Speed = 0;
+    }
+
+    public void Restart()
+    {
+        this.Speed = InitialSpeed;
     }
 }

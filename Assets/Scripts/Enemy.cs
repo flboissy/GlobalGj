@@ -9,7 +9,8 @@ public class Enemy : Entity
 
 	protected override void Init()
 	{
-		IaAgent = gameObject.GetComponent<NavMeshAgent>();
+        InitialSpeed = Speed;
+        IaAgent = gameObject.GetComponent<NavMeshAgent>();
 	}
 
 	protected override void Move(Vector3 targetPos)
