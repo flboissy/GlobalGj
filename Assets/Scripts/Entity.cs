@@ -60,7 +60,14 @@ public class Entity : MonoBehaviour
     {
 	    transform.LookAt(position,Vector3.up);
     }
-	
+    /**
+     * Entity Launch Attack
+     */
+    protected virtual void LaunchAttack()
+    {
+	    SetTriggerAnim("Attack");
+    }
+    
     /**
      * Entity Attack
      */
@@ -90,6 +97,7 @@ public class Entity : MonoBehaviour
 
     protected virtual void Dead()
     {
+	    gameObject.SetActive(false);
 	    Destroy(gameObject);
     }
     

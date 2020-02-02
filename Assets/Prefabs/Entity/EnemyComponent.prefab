@@ -72,6 +72,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 2
   RotateSpeed: 0
+  MaxLife: 0
+  Dammages: 0
+  Spawner: {fileID: 0}
   startRadius: 10
 --- !u!95 &1700271362722199084
 Animator:
@@ -117,10 +120,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 3
+  m_CollisionDetection: 0
 --- !u!1 &7425004999032532751
 GameObject:
   m_ObjectHideFlags: 0

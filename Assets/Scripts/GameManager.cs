@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private List<Component> ComponentsInScene = new List<Component>();
     private List<Component> SelectableComponent = new List<Component>();
     public List<Action> actions;
+	private List<EnemySpawn> EnemySpawnPoints;
 	
 	// Start is called before the first frame update
     private void Awake()
@@ -29,41 +30,68 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Debug.Log("START - GAME MANAGER");
-        ComponentsInScene = GameObject.FindGameObjectsWithTag("Component").Select((go) => go.GetComponent<Component>()).ToList();
+       
         if (!SpawnPoint)
 	    {
 		    Debug.Log("No spawn point for player");
 		    return;
 	    }
-
-	    RetrieveEnemySpawnPoints();
 	    InstantiatePlayer(SpawnPoint.position);
-
+	    FindEnemySpawnPoints();
+	    FindComponents();
+	    StartCoroutine("WaitBeforeSpawnEnemy");
     }
 
-    private void RetrieveEnemySpawnPoints()
+    private void FindEnemySpawnPoints()
     {
-	    //GameObject[] spawnPoints;
+	    EnemySpawnPoints = FindObjectsOfType<EnemySpawn>().ToList();
+    }
+
+    private void FindComponents()
+    {
+        ComponentsInScene = GameObject.FindGameObjectsWithTag("Component").Select((go) => go.GetComponent<Component>()).ToList();
+        
     }
     
     private void InstantiatePlayer(Vector3 position)
     {
 	    PlayerObj = Instantiate(PlayerPrefab, position, Quaternion.identity);
     }
-
-    public GameObject GetPlayer()
-    {
-	    return PlayerObj;
-    }
     
+    private void InstantiateEnemies()
+    {
+	    foreach (EnemySpawn spawn in EnemySpawnPoints)
+	    {
+		    spawn.SpawnEnemies();
+	    }
+    }
+
     public void LoseEnergy(float amount)
     {
         EnergyBar.LoseEnergy(amount);
     }
-    // Update is called once per frame
-    void Update()
+
+    public void LoseComponent(Component component)
     {
-        if(SelectableComponent.Count > 1)
+        ComponentsInScene.Remove(component);
+	    if (ComponentsInScene.Count < 1)
+	    {
+		    Debug.Log("Game Over");
+	    }
+    }
+
+    public void LoseEnemySpawnPoint(EnemySpawn spawnPoint)
+    {
+	    EnemySpawnPoints.Remove(spawnPoint);
+	    if (EnemySpawnPoints.Count < 1)
+	    {
+		    Debug.Log("Win");
+	    }
+    }
+
+    public void Update()
+    {
+        if (SelectableComponent.Count > 1)
         {
             if (Input.GetButtonDown("NextComp"))
             {
@@ -91,14 +119,14 @@ public class GameManager : MonoBehaviour
 
             if (Input.GetButtonDown("PreviousComp"))
             {
-                if(currentSelected == -1)
+                if (currentSelected == -1)
                 {
                     currentSelected = SelectableComponent.Count - 1;
                     SelectableComponent[currentSelected].setIsSelected(true);
                 }
                 else
                 {
-                    if(currentSelected == 0)
+                    if (currentSelected == 0)
                     {
                         SelectableComponent[currentSelected].setIsSelected(false);
                         currentSelected = SelectableComponent.Count - 1;
@@ -115,14 +143,19 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if(SelectableComponent.Count == 1)
+            if (SelectableComponent.Count == 1)
             {
                 currentSelected = 0;
                 SelectableComponent[currentSelected].setIsSelected(true);
             }
         }
-       
 
+    }
+
+    IEnumerator WaitBeforeSpawnEnemy()
+    {
+        yield return new WaitForSeconds(3.0f);
+        InstantiateEnemies();
     }
 
 
@@ -135,5 +168,6 @@ public class GameManager : MonoBehaviour
         }
         SelectableComponent = ComponentsInScene.Where((comp) => comp.getIsVisible()).ToList();
         SelectableComponent = SelectableComponent.OrderByDescending(comp => comp.transform.position.y).ToList() ;
+
     }
 }

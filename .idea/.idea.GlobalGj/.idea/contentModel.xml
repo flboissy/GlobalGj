@@ -53,6 +53,7 @@
           <e p="AspectRatio.cs" t="Include" />
           <e p="Classes" t="Include">
             <e p="Action.cs" t="Include" />
+            <e p="ScriptableAction.cs" t="Include" />
             <e p="ScriptablePlayer.cs" t="Include" />
           </e>
           <e p="Clickable.cs" t="Include" />
@@ -60,13 +61,13 @@
           <e p="Enemy.cs" t="Include" />
           <e p="EnemyComponent.cs" t="Include" />
           <e p="EnemyPlayer.cs" t="Include" />
+          <e p="EnemySpawn.cs" t="Include" />
           <e p="EnergyBar.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="MenuClickManager.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
-          <e p="ScriptableAction.cs" t="Include" />
         </e>
       </e>
       <e p="GlobalGj.sln" t="IncludeFlat" />

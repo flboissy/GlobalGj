@@ -8,7 +8,8 @@ using UnityEngine.AI;
 public class Enemy : Entity
 {
 	protected NavMeshAgent IaAgent;
-
+	public EnemySpawn Spawner;
+	
 	protected override void Init()
 	{
         InitialSpeed = Speed;
@@ -30,6 +31,7 @@ public class Enemy : Entity
 
 	protected override void Dead()
 	{
+		if(Spawner)Spawner.EnemyKill(gameObject);
 		base.Dead();
 	}
 }

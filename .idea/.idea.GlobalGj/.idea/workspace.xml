@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a38380e-c3b9-48d2-bf49-3f30180bd2eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GlobalGj/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GlobalGj/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GlobalGj/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GlobalGj/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fx.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fx.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/IATest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IATest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Entity/EnemyPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Entity/EnemyPlayer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +19,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Actions/Electrochoc.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Clickable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyPlayer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -28,27 +29,30 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Actions/ActionButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Actions/FireWall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemySpawn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Classes/ScriptablePlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Actions/DroneEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Classes/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Actions/ActionMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DroneEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawnManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/FireWall.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/DroneEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Actions/Drones.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Actions/DroneEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyPlayer.cs" />
       </list>
     </option>
   </component>
@@ -100,7 +104,8 @@
       <workItem from="1580508054888" duration="16079000" />
       <workItem from="1580539011851" duration="8929000" />
       <workItem from="1580554568603" duration="11346000" />
-      <workItem from="1580570646558" duration="14056000" />
+      <workItem from="1580570646558" duration="14656000" />
+      <workItem from="1580616706002" duration="8279000" />
     </task>
     <servers />
   </component>

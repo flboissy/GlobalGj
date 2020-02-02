@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class EnemyPlayer : Enemy
 {
+	public GameObject ExplosionPrefab;
+	
 	// Start is called before the first frame update
     void Start()
     {
@@ -26,9 +28,8 @@ public class EnemyPlayer : Enemy
     {
 	    if (other.gameObject.CompareTag("Player"))
 	    {
-		    Attack();
+		    LaunchAttack();
 		    other.gameObject.GetComponent<Entity>().TakeDammages(Dammages);
-		    Debug.Log("player");
 	    }
     }
 
