@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts;
 using UnityEngine;
 
 public class Drones : MonoBehaviour
 {
 	private List<Transform> DronesObj;
-	
+
+	public ScriptableAction associatedAction;
     // Start is called before the first frame update
     void Start()
     {

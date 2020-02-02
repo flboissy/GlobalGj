@@ -8,11 +8,42 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Plugins" t="Include">
+          <e p="KY_effects" t="Include">
+            <e p="MagicEffectsPackFree" t="Include">
+              <e p="ReadMe.txt" t="Include" />
+            </e>
+            <e p="Script" t="Include">
+              <e p="ConGUI.cs" t="Include" />
+              <e p="Lighting.cs" t="Include" />
+            </e>
+          </e>
           <e p="Mega Toon FX Free Pack" t="Include">
             <e p="Script" t="Include">
               <e p="AutoDestory.cs" t="Include" />
               <e p="CameraOrbit.cs" t="Include" />
               <e p="SceneManager.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Mirza Beig" t="Include">
+            <e p="_DOCS" t="Include">
+              <e p="README - Inferno VFX.txt" t="Include" />
+            </e>
+            <e p="Particle Systems" t="Include">
+              <e p="_Common" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="_Demo" t="Include">
+                    <e p="DemoManager.cs" t="Include" />
+                    <e p="FPSDisplay.cs" t="Include" />
+                    <e p="FPSTest.cs" t="Include" />
+                    <e p="LoopingParticleSystemsManager.cs" t="Include" />
+                    <e p="MouseFollow.cs" t="Include" />
+                    <e p="OneshotParticleSystemsManager.cs" t="Include" />
+                    <e p="ParticleManager.cs" t="Include" />
+                  </e>
+                  <e p="AnimatedLight.cs" t="Include" />
+                  <e p="CameraShake.cs" t="Include" />
+                </e>
+              </e>
             </e>
           </e>
           <e p="NavMeshComponents" t="Include">
@@ -41,7 +72,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Actions" t="Include">
-            <e p="ActionButton.cs" t="Include" />
+            <e p="ActionButtonManager.cs" t="Include" />
             <e p="ActionFabric.cs" t="Include" />
             <e p="ActionMenu.cs" t="Include" />
             <e p="DroneEntity.cs" t="Include" />
@@ -57,7 +88,7 @@
             <e p="ScriptablePlayer.cs" t="Include" />
           </e>
           <e p="Clickable.cs" t="Include" />
-          <e p="CooldownManager.cs" t="Include" />
+          <e p="Component.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="EnemyComponent.cs" t="Include" />
           <e p="EnemyPlayer.cs" t="Include" />

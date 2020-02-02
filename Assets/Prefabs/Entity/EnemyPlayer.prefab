@@ -53,7 +53,8 @@ MonoBehaviour:
   MaxLife: 0
   Dammages: 2
   Spawner: {fileID: 0}
-  ExplosionPrefab: {fileID: 134748, guid: cdd780b81efd0d84f80cf46446563482, type: 3}
+  ExplosionPrefab: {fileID: 68007797252165215, guid: 187b1e1f54edb814e8fc27663313155b,
+    type: 3}
 --- !u!195 &3718675139784805388
 NavMeshAgent:
   m_ObjectHideFlags: 0

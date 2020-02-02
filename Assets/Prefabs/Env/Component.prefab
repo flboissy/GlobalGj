@@ -66,6 +66,7 @@ MonoBehaviour:
     Available: 0
     sprite: {fileID: 0}
     inCooldown: 0
+    keyCode: 0
 --- !u!1 &6143882228989936187
 GameObject:
   m_ObjectHideFlags: 0

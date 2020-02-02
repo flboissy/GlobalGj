@@ -35,6 +35,7 @@ public class EnemyPlayer : Enemy
 
     protected override void Attack()
     {
+	    Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
 	    Dead();
     }
 }
