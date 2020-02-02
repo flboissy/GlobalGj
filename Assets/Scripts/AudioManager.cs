@@ -11,9 +11,7 @@ namespace Assets.Scripts
     class AudioManager : MonoBehaviour
     {
         public static AudioManager instance;
-
-        public AudioMixerGroup mixerGroup;
-
+        
         public Sound[] sounds;
 
         void Awake()
