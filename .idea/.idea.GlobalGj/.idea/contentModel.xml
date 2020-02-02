@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="MenuManager.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="KY_effects" t="Include">
             <e p="MagicEffectsPackFree" t="Include">
@@ -87,6 +88,7 @@
             <e p="Action.cs" t="Include" />
             <e p="ScriptableAction.cs" t="Include" />
             <e p="ScriptablePlayer.cs" t="Include" />
+            <e p="Wave.cs" t="Include" />
           </e>
           <e p="Clickable.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
@@ -99,6 +101,7 @@
           <e p="MenuClickManager.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
+          <e p="WaveManager.cs" t="Include" />
         </e>
       </e>
       <e p="GlobalGj.sln" t="IncludeFlat" />
