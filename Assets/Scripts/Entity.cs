@@ -60,7 +60,7 @@ public class Entity : MonoBehaviour
     {
 	    transform.LookAt(position,Vector3.up);
     }
-	
+    
     /**
      * Entity Attack
      */

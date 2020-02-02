@@ -20,7 +20,16 @@ public class FireWall : MonoBehaviour
     {
         if(Time.time > startTime + associatedAction.duration)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+	    if (other.CompareTag("Enemy"))
+	    {
+		    other.GetComponent<Entity>().TakeDammages();
+	    }
+    }
+    
 }

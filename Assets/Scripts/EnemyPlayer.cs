@@ -28,7 +28,6 @@ public class EnemyPlayer : Enemy
 	    {
 		    Attack();
 		    other.gameObject.GetComponent<Entity>().TakeDammages(Dammages);
-		    Debug.Log("player");
 	    }
     }
 

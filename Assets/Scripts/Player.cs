@@ -24,6 +24,7 @@ public class Player : Entity
     // Update is called once per frames
     void Update()
     {
+	    if(CharCtrl)SetFloatValue("Speed", GetCurrentSpeed(CharCtrl.velocity));
 	    if (CharCtrl.isGrounded)
 	    {
 		    moveDirection = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
@@ -58,7 +59,8 @@ public class Player : Entity
 
     protected override void Attack()
     {
-	    GameObject bullet = Instantiate(BulletPrefab, transform.position + new Vector3(0,0.5f,0), transform.localRotation);
+	    base.Attack();
+	    Instantiate(BulletPrefab, transform.position + transform.forward + new Vector3(0,0.5f,0), transform.localRotation);
     }
 
     IEnumerator WaitBetweenAttack()

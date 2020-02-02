@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6260996843567450837}
   - component: {fileID: 6260996843567450835}
   - component: {fileID: 6260996843567450836}
+  - component: {fileID: 6904319758418893965}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -70,6 +71,25 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!95 &6904319758418893965
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6260996843567450832}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8d53a5d16f0b534d9e0a269f96c6e90, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8431775906954652380
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,7 +103,7 @@ GameObject:
   - component: {fileID: 925592462}
   m_Layer: 10
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 8431775906954652380}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 6260996843567450837}
   m_RootOrder: 0
@@ -141,7 +161,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 33a42aca13946924f8821a49cab458f6, type: 3}
+  m_Sprite: {fileID: 5031185321042194314, guid: 32e84d191e441484c90742d55d01b5f0,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -50,6 +50,7 @@ public class EnemyComponent : Enemy
     {
 	    if (other.gameObject.CompareTag("Component"))
 	    {
+		    Attack();
 		    Debug.Log(("Take dammages"));
 	    }
     }

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BugRedWalk
+  m_Name: TankAttack
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,10 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 5031185321042194314, guid: 32e84d191e441484c90742d55d01b5f0,
+      value: {fileID: -5269741075877691332, guid: 2572a03dd76c4e442a3493a172079f26,
         type: 3}
-    - time: 1
-      value: {fileID: 5031185321042194314, guid: 32e84d191e441484c90742d55d01b5f0,
+    - time: 0.1
+      value: {fileID: -3739179403231002746, guid: 2572a03dd76c4e442a3493a172079f26,
+        type: 3}
+    - time: 0.2
+      value: {fileID: 8662854028057719426, guid: 2572a03dd76c4e442a3493a172079f26,
         type: 3}
     attribute: m_Sprite
     path: Sprite
@@ -44,19 +47,20 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 5031185321042194314, guid: 32e84d191e441484c90742d55d01b5f0, type: 3}
-    - {fileID: 5031185321042194314, guid: 32e84d191e441484c90742d55d01b5f0, type: 3}
+    - {fileID: -5269741075877691332, guid: 2572a03dd76c4e442a3493a172079f26, type: 3}
+    - {fileID: -3739179403231002746, guid: 2572a03dd76c4e442a3493a172079f26, type: 3}
+    - {fileID: 8662854028057719426, guid: 2572a03dd76c4e442a3493a172079f26, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.1
+    m_StopTime: 0.3
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0

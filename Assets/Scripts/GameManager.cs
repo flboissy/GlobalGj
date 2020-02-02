@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,9 @@ public class GameManager : MonoBehaviour
     public EnergyBar EnergyBar;
     public ScriptablePlayer player;
 	public Transform SpawnPoint;
+
+	private List<GameObject> Components;
+	private List<EnemySpawn> EnemySpawnPoints;
 	
 	// Start is called before the first frame update
     private void Awake()
@@ -28,31 +32,61 @@ public class GameManager : MonoBehaviour
 		    return;
 	    }
 	    
-	    RetrieveEnemySpawnPoints();
+	    FindEnemySpawnPoints();
+	    FindComponents();
 	    InstantiatePlayer(SpawnPoint.position);
+	    StartCoroutine("WaitBeforeSpawnEnemy");
     }
 
-    private void RetrieveEnemySpawnPoints()
+    private void FindEnemySpawnPoints()
     {
-	    //GameObject[] spawnPoints;
+	    EnemySpawnPoints = FindObjectsOfType<EnemySpawn>().ToList();
+    }
+
+    private void FindComponents()
+    {
+	    Components = GameObject.FindGameObjectsWithTag("Component").ToList();
     }
     
     private void InstantiatePlayer(Vector3 position)
     {
 	    PlayerObj = Instantiate(PlayerPrefab, position, Quaternion.identity);
     }
-
-    public GameObject GetPlayer()
-    {
-	    return PlayerObj;
-    }
     
+    private void InstantiateEnemies()
+    {
+	    foreach (EnemySpawn spawn in EnemySpawnPoints)
+	    {
+		    spawn.SpawnEnemies();
+	    }
+    }
+
     public void LoseEnergy(float amount)
     {
         EnergyBar.LoseEnergy(amount);
     }
-    // Update is called once per frame
-    void Update()
+
+    public void LoseComponent(GameObject component)
     {
+	    Components.Remove(component);
+	    if (Components.Count < 1)
+	    {
+		    Debug.Log("Game Over");
+	    }
+    }
+
+    public void LoseEnemySpawnPoint(EnemySpawn spawnPoint)
+    {
+	    EnemySpawnPoints.Remove(spawnPoint);
+	    if (EnemySpawnPoints.Count < 1)
+	    {
+		    Debug.Log("Win");
+	    }
+    }
+
+    IEnumerator WaitBeforeSpawnEnemy()
+    {
+	    yield return new WaitForSeconds(3.0f);
+	    InstantiateEnemies();
     }
 }

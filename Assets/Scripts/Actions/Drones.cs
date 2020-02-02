@@ -20,9 +20,15 @@ public class Drones : MonoBehaviour
 	    if (DronesObj.Count > 0)
 	    {
 		    Transform drone = DronesObj[0];
-		    drone.GetComponent<DroneEntity>().SetTarget(target);
+		    DroneEntity droneEntity = drone.GetComponent<DroneEntity>();
+		    droneEntity.SetTarget(target);
+		    droneEntity.EnablePhysics();
 		    DronesObj.RemoveAt(0);
-		    if(DronesObj.Count<1) Destroy(gameObject);
+		    if (DronesObj.Count < 1)
+		    {
+			    Destroy(gameObject);
+			    gameObject.SetActive(false);
+		    }
 	    }
     }
 
