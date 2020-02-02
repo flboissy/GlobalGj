@@ -666,6 +666,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TripleSpawn
       objectReference: {fileID: 0}
+    - target: {fileID: 1129585055198350564, guid: 3783613b038497247bc2ed03fca17e6f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1129585055198350566, guid: 3783613b038497247bc2ed03fca17e6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -842,6 +847,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UniqueSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520032583683030712, guid: c981d2f219bf67a4e884d67e1292912c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1520032583683030714, guid: c981d2f219bf67a4e884d67e1292912c,
         type: 3}
@@ -1552,6 +1562,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6479c10f0c909f045afabe514b38aabc, type: 3}
+--- !u!1 &1875992673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6523363565403139721, guid: 6479c10f0c909f045afabe514b38aabc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1875992672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1875992677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875992673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 350172b809437a64abaa6cf958cf254d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireWall: {fileID: 7362413091530069232, guid: d51c7f5f320b35044a09f701fa60a744,
+    type: 3}
+  drones: {fileID: 1603392908983704163, guid: 519a8070077c8dd4c95a43f5c6640a6a, type: 3}
+  electrochoc: {fileID: 1035556561086504755, guid: d187a5da96c17b14fb7d0617230f3d2b,
+    type: 3}
 --- !u!1001 &1934688755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1877,6 +1910,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DualSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727053879159527326, guid: 014340814fd3ad34fbff57114b3deb62,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 014340814fd3ad34fbff57114b3deb62, type: 3}

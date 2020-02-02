@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8575319531322120224}
   - component: {fileID: 7217114784071916930}
   - component: {fileID: 1875992674}
+  - component: {fileID: 1875992677}
+  - component: {fileID: 4242145108631267459}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -27,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6523363565403139721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.1797261, y: -0.73914325, z: -0.32689264}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +59,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6523363565403139721}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e55208b02a6489049bd39cabc4b24bb8, type: 3}
   m_Name: 
@@ -77,3 +79,123 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   timeBetweenWaves: 10
+--- !u!114 &1875992677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6523363565403139721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 350172b809437a64abaa6cf958cf254d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireWall: {fileID: 7362413091530069232, guid: d51c7f5f320b35044a09f701fa60a744,
+    type: 3}
+  drones: {fileID: 1603392908983704163, guid: 519a8070077c8dd4c95a43f5c6640a6a, type: 3}
+  electrochoc: {fileID: 1035556561086504755, guid: d187a5da96c17b14fb7d0617230f3d2b,
+    type: 3}
+--- !u!114 &4242145108631267459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6523363565403139721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c72e5ba175d7a7a4884a8e0d92c53eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: pistolet
+    clip: {fileID: 8300000, guid: 1de2952b0b9d0f74caab1c6df88f749d, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: player_taking_dmg
+    clip: {fileID: 8300000, guid: 4a9abd677a14eaa4e9ba86082fdcef17, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: firewall
+    clip: {fileID: 8300000, guid: bdefffe386c867442b5a6ba3a66df174, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: enemy_explosion
+    clip: {fileID: 8300000, guid: 358c897a11c52ab439f3ccfffee285bb, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: electric
+    clip: {fileID: 8300000, guid: 8c63a457800728544a0eaf174f9e8805, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: menu_select
+    clip: {fileID: 8300000, guid: 574b111c18173144795c2735e11e9443, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: menu_validation
+    clip: {fileID: 8300000, guid: 5f49813d9cf7e8848ad43a9819277b34, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: gameover
+    clip: {fileID: 8300000, guid: 1b9c1ddf37f82e948b7d1bba2719a295, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: composant_attaque
+    clip: {fileID: 8300000, guid: 0e541446b3d78d94e9b939d7331e64e1, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: drone
+    clip: {fileID: 8300000, guid: c3575137cb81c174d8b273f30d07c453, type: 3}
+    volume: 0
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
