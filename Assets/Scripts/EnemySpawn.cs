@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
 	public GameObject[] EnemyPrefabs;
-
+    public Transform[] SpawnPoints;
 	private GameManager GameMngr;
 
 	private List<GameObject> Enemies;
@@ -15,23 +15,29 @@ public class EnemySpawn : MonoBehaviour
         GameMngr = GameManager.Instance;
     }
 
-    public void SpawnEnemies()
+    private void Update()
     {
-	    for (int i = 0; i < 10; i++)
-	    {
-		    int index = Random.Range(0, EnemyPrefabs.Length);
-		    Instantiate(EnemyPrefabs[index], transform.position, Quaternion.identity);
-	    }
-	    
+        
     }
 
-    public void EnemyKill(GameObject enemy)
+    public void SpawnEnemies()
     {
-	    Enemies.Remove(enemy);
-	    if (Enemies.Count < 1)
+	    for (int i = 0; i < SpawnPoints.Length; i++)
 	    {
-		    GameMngr.LoseEnemySpawnPoint(this);
-		    Destroy(gameObject);
+		    int index = Random.Range(0, EnemyPrefabs.Length);
+		    Instantiate(EnemyPrefabs[index], SpawnPoints[i].position, Quaternion.identity);
 	    }
+
     }
+
+
+    //public void EnemyKill(GameObject enemy)
+    //{
+	   // Enemies.Remove(enemy);
+	   // if (Enemies.Count < 1)
+	   // {
+		  //  GameMngr.LoseEnemySpawnPoint(this);
+		  //  Destroy(gameObject);
+	   // }
+    //}
 }
