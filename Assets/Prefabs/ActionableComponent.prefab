@@ -920,7 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e24a57bfc0a5134d98806052a91c92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  associatedAction: {fileID: 11400000, guid: 04b536000581893488dc48c3df1648b5, type: 2}
+  associatedAction: {fileID: 11400000, guid: d386294f4013dfb478420086f90a4065, type: 2}
   associatedComponent: {fileID: 8584943681620316656}
   cooldownImage: {fileID: 8584943682741235607}
 --- !u!1 &8584943683080885417

@@ -17,6 +17,7 @@ public class FireWall : MonoBehaviour
         BoxCollider parentCollider = transform.parent.GetComponent<BoxCollider>();
         BoxCollider collider = GetComponent<BoxCollider>();
         collider.size = parentCollider.size + new Vector3(1, 1, 0);
+        AudioManager.instance.Play("firewall");
         GameObject firewall = Instantiate(FirewallFX, transform);
         firewall.transform.localScale= collider.size;
         firewall.transform.localPosition = Vector3.zero;

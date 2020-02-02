@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
 public class Player : Entity
@@ -59,6 +60,7 @@ public class Player : Entity
 
     protected override void Attack()
     {
+	    AudioManager.instance.Play("pistolet");
 	    Instantiate(BulletPrefab, transform.position + transform.forward + new Vector3(0,0.5f,0), transform.localRotation);
     }
 

@@ -15,9 +15,8 @@ public class GameManager : MonoBehaviour
     public ScriptablePlayer player;
 	public Transform SpawnPoint;
 	public MenuManager MenuMngr;
-	public GameObject PrefabLevel;
-
-	private GameObject CurrLevel;
+	public WaveManager WaveManager;
+	public GameObject CurrLevel;
     private int currentSelected = -1;
 
     private List<ActionableComponent> ComponentsInScene = new List<ActionableComponent>();
@@ -38,8 +37,8 @@ public class GameManager : MonoBehaviour
     
     public void Init()
     {
-	    CurrLevel = Instantiate(PrefabLevel, Vector3.zero, Quaternion.identity);
-	    
+	    CurrLevel.SetActive(true);
+	    WaveManager.enabled = true;
 		if (!SpawnPoint)
 	    {
 		    Debug.Log("No spawn point for player");
@@ -79,7 +78,7 @@ public class GameManager : MonoBehaviour
 
     public void LoseEnergy(float amount)
     {
-        EnergyBar.LoseEnergy(amount);
+        //EnergyBar.LoseEnergy(amount);
     }
 
     public void LoseComponent(ActionableComponent component)

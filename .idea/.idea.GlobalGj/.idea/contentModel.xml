@@ -84,6 +84,7 @@
           </e>
           <e p="ArrayList.cs" t="Include" />
           <e p="AspectRatio.cs" t="Include" />
+          <e p="AudioManager.cs" t="Include" />
           <e p="Classes" t="Include">
             <e p="Action.cs" t="Include" />
             <e p="ScriptableAction.cs" t="Include" />
@@ -101,6 +102,7 @@
           <e p="MenuClickManager.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
+          <e p="Sound.cs" t="Include" />
           <e p="WaveManager.cs" t="Include" />
         </e>
       </e>

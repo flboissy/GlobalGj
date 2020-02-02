@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEditor;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class Entity : MonoBehaviour
 	public float RotateSpeed;
 	public float MaxLife;
 	public float Dammages;
-
+	
 	private float Life;
 	protected Transform Target;
 	protected Animator EntityAnimator;
@@ -91,6 +92,7 @@ public class Entity : MonoBehaviour
 
     public void TakeDammages(float dammages)
     {
+	    AudioManager.instance.Play("player_taking_dmg");
 	    Life -= dammages;
 	    if (Life<=0 ) Dead();
     }

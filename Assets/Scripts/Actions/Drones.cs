@@ -18,6 +18,7 @@ public class Drones : MonoBehaviour
 	    BoxCollider collider = GetComponent<BoxCollider>();
 	    collider.size = parentCollider.size + new Vector3(1, 1, 0);
 	    Bounds bounds = collider.bounds;
+	    AudioManager.instance.Play("drone");
 	    InstantiateDrone(new Vector3(bounds.min.x,bounds.center.y,bounds.min.z));
 	    InstantiateDrone(new Vector3(bounds.max.x,bounds.center.y,bounds.min.z));
 	    InstantiateDrone(new Vector3(bounds.min.x,bounds.center.y,bounds.max.z));

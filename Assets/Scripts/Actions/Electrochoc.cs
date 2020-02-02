@@ -7,7 +7,7 @@ public class Electrochoc : MonoBehaviour
 {
     public ScriptableAction associatedAction;
     private float startTime;
-    private List<GameObject> triggers;
+    private List<GameObject> triggers =  new List<GameObject>();
     public GameObject ElectrochocFX;
     private void Start()
     {
@@ -15,6 +15,8 @@ public class Electrochoc : MonoBehaviour
         BoxCollider parentCollider = transform.parent.GetComponent<BoxCollider>();
         BoxCollider collider = GetComponent<BoxCollider>();
         collider.size = parentCollider.size + new Vector3(2, 2, 0);
+        AudioManager.instance.Play("electric");
+        
         GameObject electrochoc = Instantiate(ElectrochocFX, transform);
         electrochoc.transform.localScale= collider.size;
         electrochoc.transform.localPosition = Vector3.zero;
@@ -33,6 +35,7 @@ public class Electrochoc : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+	       
             triggers.Add(other.gameObject);
             other.GetComponent<Entity>().Stop();
         }
@@ -44,7 +47,10 @@ public class Electrochoc : MonoBehaviour
     {
         foreach (var go in triggers)
         {
-            go.GetComponent<Entity>().Restart();
+	        if (go != null)
+	        {
+		        go.GetComponent<Entity>().Restart();
+	        }
         }
     }
 }

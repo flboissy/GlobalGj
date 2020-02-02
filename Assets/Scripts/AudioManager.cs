@@ -8,7 +8,7 @@ using UnityEngine.Audio;
 
 namespace Assets.Scripts
 {
-    class AudioManager : MonoBehaviour
+    public class AudioManager : MonoBehaviour
     {
         public static AudioManager instance;
         
