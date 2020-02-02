@@ -1460,6 +1460,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1875992674, guid: 6479c10f0c909f045afabe514b38aabc, type: 3}
+      propertyPath: waves.Array.data[0].EnemySpawns.Array.data[0]
+      value: 
+      objectReference: {fileID: 52346558}
+    - target: {fileID: 1875992674, guid: 6479c10f0c909f045afabe514b38aabc, type: 3}
+      propertyPath: waves.Array.data[0].EnemySpawns.Array.data[1]
+      value: 
+      objectReference: {fileID: 134316334}
+    - target: {fileID: 1875992674, guid: 6479c10f0c909f045afabe514b38aabc, type: 3}
+      propertyPath: waves.Array.data[1].EnemySpawns.Array.data[0]
+      value: 
+      objectReference: {fileID: 52346558}
+    - target: {fileID: 1875992674, guid: 6479c10f0c909f045afabe514b38aabc, type: 3}
+      propertyPath: waves.Array.data[1].EnemySpawns.Array.data[1]
+      value: 
+      objectReference: {fileID: 134316334}
+    - target: {fileID: 1875992674, guid: 6479c10f0c909f045afabe514b38aabc, type: 3}
+      propertyPath: waves.Array.data[1].EnemySpawns.Array.data[2]
+      value: 
+      objectReference: {fileID: 1488252370}
     - target: {fileID: 6523363565403139721, guid: 6479c10f0c909f045afabe514b38aabc,
         type: 3}
       propertyPath: m_Name
@@ -1467,14 +1487,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7217114784071916930, guid: 6479c10f0c909f045afabe514b38aabc,
         type: 3}
-      propertyPath: SpawnPoint
-      value: 
-      objectReference: {fileID: 1656123075}
-    - target: {fileID: 7217114784071916930, guid: 6479c10f0c909f045afabe514b38aabc,
-        type: 3}
       propertyPath: EnergyBar
       value: 
       objectReference: {fileID: 970106298}
+    - target: {fileID: 7217114784071916930, guid: 6479c10f0c909f045afabe514b38aabc,
+        type: 3}
+      propertyPath: SpawnPoint
+      value: 
+      objectReference: {fileID: 1656123075}
     - target: {fileID: 8575319531322120224, guid: 6479c10f0c909f045afabe514b38aabc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1532,39 +1552,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6479c10f0c909f045afabe514b38aabc, type: 3}
---- !u!1 &1875992673 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6523363565403139721, guid: 6479c10f0c909f045afabe514b38aabc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1875992672}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1875992674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1875992673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e55208b02a6489049bd39cabc4b24bb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - InitialNumberOfEnemy: 15
-    CurrentNumberOfEnemy: 0
-    TimeBetweenSpawn: 1
-    EnemySpawns:
-    - {fileID: 52346558}
-    - {fileID: 134316334}
-  - InitialNumberOfEnemy: 50
-    CurrentNumberOfEnemy: 0
-    TimeBetweenSpawn: 5
-    EnemySpawns:
-    - {fileID: 52346558}
-    - {fileID: 134316334}
-    - {fileID: 1488252370}
-  timeBetweenWaves: 10
 --- !u!1001 &1934688755
 PrefabInstance:
   m_ObjectHideFlags: 0

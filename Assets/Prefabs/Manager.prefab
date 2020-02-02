@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8575319531322120224}
   - component: {fileID: 7217114784071916930}
+  - component: {fileID: 1875992674}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -48,3 +49,31 @@ MonoBehaviour:
   EnergyBar: {fileID: 0}
   player: {fileID: 11400000, guid: 526ed3ede8b4d5d4f9ea8eeb854d6e8e, type: 2}
   SpawnPoint: {fileID: 0}
+  actions: []
+--- !u!114 &1875992674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6523363565403139721}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55208b02a6489049bd39cabc4b24bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - InitialNumberOfEnemy: 15
+    CurrentNumberOfEnemy: 0
+    TimeBetweenSpawn: 1
+    EnemySpawns:
+    - {fileID: 0}
+    - {fileID: 0}
+  - InitialNumberOfEnemy: 50
+    CurrentNumberOfEnemy: 0
+    TimeBetweenSpawn: 5
+    EnemySpawns:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  timeBetweenWaves: 10
