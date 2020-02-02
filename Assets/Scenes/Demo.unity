@@ -343,6 +343,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5530441378203472424, guid: 12f67964b45177048a09b2e20c77e52a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530441378203472424, guid: 12f67964b45177048a09b2e20c77e52a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5530441378203472439, guid: 12f67964b45177048a09b2e20c77e52a,
         type: 3}
       propertyPath: m_Name
@@ -1571,6 +1581,7 @@ MonoBehaviour:
   EnemyPrefabs:
   - {fileID: 1303375187035331747, guid: a92af78c0cb500d44b0f413c0e5830c1, type: 3}
   - {fileID: 3429897851158105487, guid: 5d2881e65dd7c044dab07855eaf0c0e4, type: 3}
+  SpawnPoints: []
 --- !u!4 &1589395535
 Transform:
   m_ObjectHideFlags: 0
