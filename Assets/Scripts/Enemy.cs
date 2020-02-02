@@ -31,7 +31,7 @@ public class Enemy : Entity
 
 	protected override void Dead()
 	{
-		if(Spawner)Spawner.EnemyKill(gameObject);
+		//if(Spawner)Spawner.EnemyKill(gameObject);
 		base.Dead();
 	}
 }
