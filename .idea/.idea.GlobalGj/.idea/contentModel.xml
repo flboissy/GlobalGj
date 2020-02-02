@@ -71,6 +71,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="ActionableComponent.cs" t="Include" />
           <e p="Actions" t="Include">
             <e p="ActionButtonManager.cs" t="Include" />
             <e p="ActionFabric.cs" t="Include" />
@@ -88,7 +89,6 @@
             <e p="ScriptablePlayer.cs" t="Include" />
           </e>
           <e p="Clickable.cs" t="Include" />
-          <e p="Component.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="EnemyComponent.cs" t="Include" />
           <e p="EnemyPlayer.cs" t="Include" />
