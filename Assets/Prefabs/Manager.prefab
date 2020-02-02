@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1875992674}
   - component: {fileID: 1875992677}
   - component: {fileID: 4242145108631267459}
+  - component: {fileID: 488233371}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -51,6 +52,10 @@ MonoBehaviour:
   EnergyBar: {fileID: 0}
   player: {fileID: 11400000, guid: 526ed3ede8b4d5d4f9ea8eeb854d6e8e, type: 2}
   SpawnPoint: {fileID: 0}
+  MenuMngr: {fileID: 0}
+  PrefabLevel: {fileID: 5369742290424162879, guid: 1af391b5caa77b8459f8340f5a04e337,
+    type: 3}
+  WaveManager: {fileID: 1875992674}
   actions: []
 --- !u!114 &1875992674
 MonoBehaviour:
@@ -59,7 +64,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6523363565403139721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e55208b02a6489049bd39cabc4b24bb8, type: 3}
   m_Name: 
@@ -199,3 +204,21 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+--- !u!114 &488233371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6523363565403139721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee18ee3009280bd449641308c40537f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelMain: {fileID: 0}
+  PanelEnd: {fileID: 0}
+  WinText: {fileID: 0}
+  DefeatText: {fileID: 0}
+  audioSource: {fileID: 0}
+  GameMngr: {fileID: 7217114784071916930}

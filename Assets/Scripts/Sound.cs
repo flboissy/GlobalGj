@@ -9,7 +9,7 @@ using UnityEngine.Audio;
 namespace Assets.Scripts
 {
     [System.Serializable]
-    class Sound
+    public class Sound
     {
         public string name;
 

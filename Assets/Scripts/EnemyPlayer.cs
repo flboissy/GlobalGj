@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -42,6 +43,7 @@ public class EnemyPlayer : Enemy
 
     protected override void Attack()
     {
+	    AudioManager.instance.Play("enemy_explosion");
 	    Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
 	    Dead();
     }

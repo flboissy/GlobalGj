@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
 	public GameObject PanelEnd;
 	public GameObject WinText;
 	public GameObject DefeatText;
-	public AudioSource AudioSource;
+	public AudioSource audioSource;
 	public static MenuManager Instance;
 	public GameManager GameMngr;
 	private void Awake()
@@ -30,7 +30,8 @@ public class MenuManager : MonoBehaviour
     public void Play()
     {
 	    PanelMain.SetActive(false);
-	    //GameMngr.Init();
+	    GameMngr.Init();
+	    StopMusique();
     }
 
     public void Quit()
@@ -51,7 +52,7 @@ public class MenuManager : MonoBehaviour
 
     public void End(string state)
     {
-	    AudioSource.mute = true;
+	    audioSource.mute = true;
 	    PanelEnd.SetActive(true);
 	    switch (state)
 	    {
@@ -66,6 +67,7 @@ public class MenuManager : MonoBehaviour
 
     public void StopMusique()
     {
-	    AudioSource.mute = false;
+	    Debug.Log("Stop musique");
+	    audioSource.mute = false;
     }
 }
