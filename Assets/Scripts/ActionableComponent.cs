@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.Classes;
+using UnityEngine.UI;
 
 public class ActionableComponent : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class ActionableComponent : MonoBehaviour
     public Sprite selectedSprite;
     public Sprite notSelectedSprite;
     public bool isVisible;
+
+    public float health;
+    private float currentHealth;
+
+    public Image healthBar;
 
     public bool getIsVisible()
     {
@@ -33,7 +39,7 @@ public class ActionableComponent : MonoBehaviour
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         myRenderer = GetComponent<Renderer>();
-
+        currentHealth = health;
 
     }
 
@@ -71,5 +77,16 @@ public class ActionableComponent : MonoBehaviour
         action.inCooldown = true;
         yield return new WaitForSeconds(action.Cooldown);
         action.inCooldown = false;
+    }
+
+    public void TakeDamages(float amount)
+    {
+        this.currentHealth -= amount;
+        if(currentHealth < 0)
+        {
+            GameManager.Instance.LoseComponent(this);
+        }
+        float toto = (currentHealth * health) / 100;
+        this.healthBar.fillAmount = toto;
     }
 }

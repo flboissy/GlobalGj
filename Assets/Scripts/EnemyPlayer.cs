@@ -13,7 +13,14 @@ public class EnemyPlayer : Enemy
     {
 	    Init();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        SetTarget(player.transform);
+        if (player)
+        {
+            SetTarget(player.transform);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     // Update is called once per frame

@@ -9,6 +9,8 @@ public class Enemy : Entity
 {
 	protected NavMeshAgent IaAgent;
 	public EnemySpawn Spawner;
+    public bool canAttack = true;
+    public float attackCooldown;
 	
 	protected override void Init()
 	{

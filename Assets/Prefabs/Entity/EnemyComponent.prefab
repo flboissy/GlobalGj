@@ -51,8 +51,10 @@ MonoBehaviour:
   Speed: 5
   RotateSpeed: 0
   MaxLife: 0
-  Dammages: 0
+  Dammages: 5
   Spawner: {fileID: 0}
+  canAttack: 1
+  attackCooldown: 3
   startRadius: 10
 --- !u!195 &1014601196861136160
 NavMeshAgent:
