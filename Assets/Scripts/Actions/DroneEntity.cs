@@ -15,6 +15,7 @@ public class DroneEntity : Entity
     
     private void OnTriggerEnter(Collider other)
     {
+	    Debug.Log(other);
 	    if (other.CompareTag("Enemy"))
 	    {
 		    Attack();
@@ -23,7 +24,12 @@ public class DroneEntity : Entity
 	    }
 	    Dead();
     }
-
+	
+    protected override void LookTo(Vector3 position)
+    {
+	    
+    }
+    
     public void EnablePhysics()
     {
 	    GetComponent<BoxCollider>().enabled = true;

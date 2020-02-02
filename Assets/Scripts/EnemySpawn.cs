@@ -17,7 +17,7 @@ public class EnemySpawn : MonoBehaviour
 
     public void SpawnEnemies()
     {
-	    for (int i = 0; i < 60; i++)
+	    for (int i = 0; i < 10; i++)
 	    {
 		    int index = Random.Range(0, EnemyPrefabs.Length);
 		    Instantiate(EnemyPrefabs[index], transform.position, Quaternion.identity);
