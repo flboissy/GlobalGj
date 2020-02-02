@@ -9,10 +9,11 @@ using UnityEngine.UI;
 public class ActionButtonManager : MonoBehaviour
 {
     public ScriptableAction associatedAction;
-    private Component associatedComponent;
+    public ActionableComponent associatedComponent;
     public Image cooldownImage;
     private bool isCooldown;
     private float startingCooldownTime;
+    private float timeInCooldown;
 
       
     private void Update()
@@ -27,18 +28,13 @@ public class ActionButtonManager : MonoBehaviour
         
         if(isCooldown)
         {
-            cooldownImage.fillAmount = ((Time.time - startingCooldownTime) *  associatedAction.Cooldown) / 100f; 
+            timeInCooldown = Time.time - startingCooldownTime;
+            cooldownImage.fillAmount = (timeInCooldown *  associatedAction.Cooldown) / 100f;
+            if (cooldownImage.fillAmount == 1){
+                isCooldown = false;
+            }
         }
 
-        if (Time.time > startingCooldownTime + associatedAction.Cooldown && isCooldown)
-        {
-            isCooldown = false;
-        }
 
-    }
-
-    private void Start()
-    {
-        associatedComponent = GetComponentInParent<Component>();
     }
 }

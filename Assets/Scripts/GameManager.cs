@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
 
     private int currentSelected = -1;
 
-    private List<Component> ComponentsInScene = new List<Component>();
-    private List<Component> SelectableComponent = new List<Component>();
+    private List<ActionableComponent> ComponentsInScene = new List<ActionableComponent>();
+    private List<ActionableComponent> SelectableComponent = new List<ActionableComponent>();
     public List<Action> actions;
 	private List<EnemySpawn> EnemySpawnPoints;
 	
@@ -49,8 +49,9 @@ public class GameManager : MonoBehaviour
 
     private void FindComponents()
     {
-        ComponentsInScene = GameObject.FindGameObjectsWithTag("Component").Select((go) => go.GetComponent<Component>()).ToList();
-        
+        ComponentsInScene = GameObject.FindGameObjectsWithTag("Component").Select((go) => go.GetComponent<ActionableComponent>()).ToList();
+        SelectableComponent = ComponentsInScene.Where((comp) => comp.getIsVisible()).ToList();
+
     }
     
     private void InstantiatePlayer(Vector3 position)
@@ -71,7 +72,7 @@ public class GameManager : MonoBehaviour
         EnergyBar.LoseEnergy(amount);
     }
 
-    public void LoseComponent(Component component)
+    public void LoseComponent(ActionableComponent component)
     {
         ComponentsInScene.Remove(component);
 	    if (ComponentsInScene.Count < 1)

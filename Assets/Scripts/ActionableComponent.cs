@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.Classes;
 
-public class Component : MonoBehaviour
+public class ActionableComponent : MonoBehaviour
 {
 
     private bool isSelected;

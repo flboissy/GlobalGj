@@ -17,4 +17,4 @@ MonoBehaviour:
   Sprite: {fileID: 0}
   Duration: 0
   Cooldown: 15
-  keyCode: 101
+  inputName: Square

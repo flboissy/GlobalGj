@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 3
   EnergyCost: 40
-  sprite: {fileID: 0}
-  duration: 5
+  Sprite: {fileID: 0}
+  Duration: 0
+  Cooldown: 5
+  inputName: Toto

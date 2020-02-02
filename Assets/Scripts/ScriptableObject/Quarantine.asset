@@ -17,4 +17,4 @@ MonoBehaviour:
   Sprite: {fileID: 0}
   Duration: 0
   Cooldown: 20
-  keyCode: 114
+  inputName: Cross

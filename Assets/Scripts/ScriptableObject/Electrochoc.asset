@@ -17,4 +17,4 @@ MonoBehaviour:
   Sprite: {fileID: 0}
   Duration: 8
   Cooldown: 10
-  keyCode: 97
+  inputName: Circle
