@@ -15,6 +15,7 @@ public class EnemyComponent : Enemy
     {
 	    Init();
 	    curRadius = startRadius;
+
     }
 
     // Update is called once per frame

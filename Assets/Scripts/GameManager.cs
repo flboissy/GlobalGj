@@ -81,13 +81,9 @@ public class GameManager : MonoBehaviour
 	    }
     }
 
-    public void LoseEnemySpawnPoint(EnemySpawn spawnPoint)
+    public void WinByKilledAllEnemy()
     {
-	    EnemySpawnPoints.Remove(spawnPoint);
-	    if (EnemySpawnPoints.Count < 1)
-	    {
-		    Debug.Log("Win");
-	    }
+        Debug.Log("win");
     }
 
     public void Update()

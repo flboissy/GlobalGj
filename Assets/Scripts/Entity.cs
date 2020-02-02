@@ -56,7 +56,7 @@ public class Entity : MonoBehaviour
     /**
      * Entity look to a target
      */
-    protected void LookTo(Vector3 position)
+    protected virtual void LookTo(Vector3 position)
     {
 	    transform.LookAt(position,Vector3.up);
     }

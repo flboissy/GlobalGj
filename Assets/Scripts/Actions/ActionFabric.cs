@@ -45,7 +45,7 @@ public class ActionFabric : MonoBehaviour
                 Debug.Log("I will instantiate: " + type);
                 break;
             case ActionType.Drone:
-	            Instantiate(electrochoc, target);
+	            Instantiate(drones, target);
 	            GameManager.Instance.LoseEnergy(drones.associatedAction.EnergyCost);
                 break;
             case ActionType.Push:
