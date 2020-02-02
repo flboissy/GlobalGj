@@ -6,6 +6,8 @@ public class EnemySpawn : MonoBehaviour
 {
 	public GameObject[] EnemyPrefabs;
     public Transform[] SpawnPoints;
+    public GameObject Fx_Spawn;
+    
 	private GameManager GameMngr;
 
 	private List<GameObject> Enemies;
@@ -13,6 +15,8 @@ public class EnemySpawn : MonoBehaviour
     void Start()
     {
         GameMngr = GameManager.Instance;
+        GameObject obj = Instantiate(Fx_Spawn, transform);
+        obj.transform.localPosition = Vector3.zero;
     }
 
     private void Update()
@@ -30,6 +34,10 @@ public class EnemySpawn : MonoBehaviour
 
     }
 
+    public void NoLongerInUser()
+    {
+	    Destroy(transform.GetChild(0));
+    }
 
     //public void EnemyKill(GameObject enemy)
     //{

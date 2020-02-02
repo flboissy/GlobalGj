@@ -83,6 +83,8 @@ MonoBehaviour:
   - {fileID: 3689414213459027313}
   - {fileID: 4824277217672157331}
   - {fileID: 6026140954981954274}
+  Fx_Spawn: {fileID: 1011686704490344630, guid: 44832c132dc42f642b5753ce1b8cd8c6,
+    type: 3}
 --- !u!1 &3963126723509027698
 GameObject:
   m_ObjectHideFlags: 0

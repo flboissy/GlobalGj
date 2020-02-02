@@ -49,14 +49,26 @@ public class WaveManager : MonoBehaviour
             }
             yield return new WaitForSeconds(wave.TimeBetweenSpawn);
         }
-
+		
         waveIndex++;
+        if (waveIndex >= waves.Length)
+        {
+	        foreach (var spwn in wave.EnemySpawns)
+	        {
+		        spwn.NoLongerInUser();
+	        }
+	        GameManager.Instance.EndGame("Win");
+        }
     }
     
 
     void Update()
     {
-
+	    if (waveIndex >= waves.Length)
+	    {
+		    return;
+	    }
+	    
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());

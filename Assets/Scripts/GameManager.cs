@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,7 +14,10 @@ public class GameManager : MonoBehaviour
     public EnergyBar EnergyBar;
     public ScriptablePlayer player;
 	public Transform SpawnPoint;
+	public MenuManager MenuMngr;
+	public GameObject PrefabLevel;
 
+	private GameObject CurrLevel;
     private int currentSelected = -1;
 
     private List<ActionableComponent> ComponentsInScene = new List<ActionableComponent>();
@@ -29,16 +33,22 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("START - GAME MANAGER");
-       
-        if (!SpawnPoint)
+	    MenuMngr = MenuManager.Instance;
+    }
+    
+    public void Init()
+    {
+	    CurrLevel = Instantiate(PrefabLevel, Vector3.zero, Quaternion.identity);
+	    
+		if (!SpawnPoint)
 	    {
 		    Debug.Log("No spawn point for player");
 		    return;
 	    }
-	    InstantiatePlayer(SpawnPoint.position);
+		
 	    FindEnemySpawnPoints();
 	    FindComponents();
+	    InstantiatePlayer(SpawnPoint.position);
 	    StartCoroutine("WaitBeforeSpawnEnemy");
     }
 
@@ -77,13 +87,14 @@ public class GameManager : MonoBehaviour
         ComponentsInScene.Remove(component);
 	    if (ComponentsInScene.Count < 1)
 	    {
-		    Debug.Log("Game Over");
+		    EndGame("GameOver");
 	    }
     }
 
-    public void WinByKilledAllEnemy()
+    public void EndGame(string state)
     {
-        Debug.Log("win");
+	    MenuMngr.End(state);
+	    Destroy(CurrLevel);
     }
 
     public void Update()
@@ -166,5 +177,10 @@ public class GameManager : MonoBehaviour
         SelectableComponent = ComponentsInScene.Where((comp) => comp.getIsVisible()).ToList();
         SelectableComponent = SelectableComponent.OrderByDescending(comp => comp.transform.position.y).ToList() ;
 
+    }
+
+    public void RestartGame()
+    {
+	    Init();
     }
 }

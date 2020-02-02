@@ -49,6 +49,8 @@ MonoBehaviour:
   - {fileID: 3429897851158105487, guid: 5d2881e65dd7c044dab07855eaf0c0e4, type: 3}
   SpawnPoints:
   - {fileID: 2992154480667170605}
+  Fx_Spawn: {fileID: 1011686704490344630, guid: 44832c132dc42f642b5753ce1b8cd8c6,
+    type: 3}
 --- !u!1 &5150035893007170385
 GameObject:
   m_ObjectHideFlags: 0
