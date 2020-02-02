@@ -7,6 +7,8 @@ public class ActionFabric : MonoBehaviour
 {
 
     public FireWall fireWall;
+    public Drones drones;
+    public Electrochoc electrochoc;
 
     private static ActionFabric _instance = null;
     public static ActionFabric Instance
@@ -32,18 +34,19 @@ public class ActionFabric : MonoBehaviour
         switch (type)
         {
             case ActionType.Electrochoc:
-                Debug.Log("I will instantiate: " + type);
+	            Instantiate(electrochoc, target);
+	            GameManager.Instance.LoseEnergy(electrochoc.associatedAction.EnergyCost);
                 break;
             case ActionType.Firewall:
-                Debug.Log("coucou");
-                Instantiate(fireWall, target);
+	            Instantiate(fireWall, target);
                 GameManager.Instance.LoseEnergy(fireWall.associatedAction.EnergyCost);
                 break;
             case ActionType.Quarantine:
                 Debug.Log("I will instantiate: " + type);
                 break;
             case ActionType.Drone:
-                Debug.Log("I will instantiate: " + type);
+	            Instantiate(electrochoc, target);
+	            GameManager.Instance.LoseEnergy(drones.associatedAction.EnergyCost);
                 break;
             case ActionType.Push:
                 Debug.Log("I will instantiate: " + type);
