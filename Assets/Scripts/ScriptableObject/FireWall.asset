@@ -17,4 +17,4 @@ MonoBehaviour:
   Sprite: {fileID: 0}
   Duration: 5
   Cooldown: 10
-  keyCode: 122
+  inputName: Triangle

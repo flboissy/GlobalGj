@@ -16,6 +16,6 @@ namespace Assets.Scripts
         public Sprite Sprite;
         public float Duration;
         public float Cooldown;
-        public KeyCode keyCode;
+        public String inputName;
     }
 }

@@ -17,7 +17,7 @@ public class ActionButtonManager : MonoBehaviour
       
     private void Update()
     {
-        if(associatedComponent.getIsSelected() && Input.GetKeyDown(associatedAction.keyCode) && !isCooldown)
+        if (associatedComponent.getIsSelected() && Input.GetButtonDown(associatedAction.inputName) && !isCooldown)
         {
             startingCooldownTime = Time.time;
             cooldownImage.fillAmount = 0;

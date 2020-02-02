@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        Debug.Log("START - GAME MANAGER");
         ComponentsInScene = GameObject.FindGameObjectsWithTag("Component").Select((go) => go.GetComponent<Component>()).ToList();
         if (!SpawnPoint)
 	    {
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
     {
         if(SelectableComponent.Count > 1)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetButtonDown("NextComp"))
             {
                 if (currentSelected == -1)
                 {
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetButtonDown("PreviousComp"))
             {
                 if(currentSelected == -1)
                 {
