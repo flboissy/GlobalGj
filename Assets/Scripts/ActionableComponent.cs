@@ -86,7 +86,8 @@ public class ActionableComponent : MonoBehaviour
         {
             GameManager.Instance.LoseComponent(this);
         }
-        float toto = (currentHealth * health) / 100;
-        this.healthBar.fillAmount = toto;
+        float percentageHealthLost = (amount * 100f ) / health;
+        
+        this.healthBar.fillAmount -= percentageHealthLost / 100f;
     }
 }

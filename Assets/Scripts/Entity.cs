@@ -12,6 +12,7 @@ public class Entity : MonoBehaviour
 	public float RotateSpeed;
 	public float MaxLife;
 	public float Dammages;
+    public bool canAttack = true;
 
 	private float Life;
 	protected Transform Target;
@@ -112,11 +113,13 @@ public class Entity : MonoBehaviour
     public void Stop()
     {
         this.Speed = 0;
+        canAttack = false;
     }
 
     public void Restart()
     {
         this.Speed = InitialSpeed;
+        canAttack = true;
     }
 
     protected void SetBoolAnim(string name, bool value)
