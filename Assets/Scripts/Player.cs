@@ -35,7 +35,7 @@ public class Player : Entity
 	    if (Input.GetAxis("Fire")>0 && canAttack)
 	    {
 		    canAttack = false;
-		    Attack();
+		    LaunchAttack();
 		    StartCoroutine("WaitBetweenAttack");
 	    }
 	    
@@ -59,7 +59,6 @@ public class Player : Entity
 
     protected override void Attack()
     {
-	    base.Attack();
 	    Instantiate(BulletPrefab, transform.position + transform.forward + new Vector3(0,0.5f,0), transform.localRotation);
     }
 
